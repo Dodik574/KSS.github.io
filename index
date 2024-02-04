@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: rgba(255,255,255,0.5);
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Қазақстанның құпия қызметі</h2>
+<img src="https://magazin-simvoliki.ru/uploads/product/200/263/Kazahstan_2018-12-04_13-55-05.jpg" alt="Флаг Казахстана" style="position:absolute; top:0; right:0;">
+
+<button id="myBtn1">Құжат 1 </button>
+<button id="myBtn2">Құжат 2 </button>
+<button id="myBtn3">Құжат 3 </button>
+
+<div id="myModal1" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>Қасым-Жомарт Тоқаев
+      Астана, Қазақстан
+      
+      24 қыркүйек, 2021 жыл
+      Ярослав Пельменев «Моңғол»
+      Үйсіз Жарня
+      Қарағанды, Қазақстан
+      Құрметті Ярослав!
+      Сіздің ерекше қабілеттеріңіз туралы Қазақстан үкіметі хабардар етілгенін хабарлаймын. Олар сізге не істесе де, біз сізді қоғамда қалпына келтіруге дайынбыз және сізге құқық бұзушылардан кек алуға мүмкіндік береміз. Өз кезегінде жаңа бөлімге жетекшілік етуіңізді қалаймыз, атауды өзіңіз таңдайсыз.
+      Ең жақсы тілектермен,
+      Qasım-Jomart Toqaev
+      Astana, Qazaqstan
+      </p>
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>«Богданчики» арнайы операциясы кезінде біз ФСБ агенті «Крабби Пэтти» ұстап алып, оны супер тұшпараға айналдырдық.</p>
+  </div>
+</div>
+
+<div id="myModal3" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>Набтың шкафына рұқсатсыз кіру кезінде ЦРУ агенті Декинсонс ұсталып, супер тұшпараға айналды.</p>
+  </div>
+</div>
+
+<script>
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+
+var span = document.getElementsByClassName("close");
+
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+span[0].onclick = function() {
+  modal1.style.display = "none";
+}
+
+span[1].onclick = function() {
+  modal2.style.display = "none";
+}
+
+span[2].onclick = function() {
+  modal3.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
